@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fadli Store - Jasa Editing, Desain, dan Montage GS Mobile Legends.">
+  <title>Fadli Store — Creative Digital Service</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <header class="navbar" id="navbar">
+    <a class="brand" href="#home">
+      <span class="brand-mark">F</span>
+      <span>FADLI <span>STORE</span></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Buka menu"><i class="fa-solid fa-bars"></i></button>
+    <nav id="navMenu">
+      <a href="#home">Home</a>
+      <a href="#products">Produk</a>
+      <a href="#about">Tentang Kami</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+    <button class="cart-btn" id="openCart" aria-label="Buka keranjang">
+      <i class="fa-solid fa-bag-shopping"></i><span class="cart-count" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span></span> CREATIVE DIGITAL SERVICE</div>
+        <h1>Solusi Kreatif Digital untuk <strong>Kebutuhan Kamu</strong></h1>
+        <p>Jasa Editing, Desain, hingga Montage GS Mobile Legends dengan hasil profesional dan harga terjangkau.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#products">Lihat Produk <i class="fa-solid fa-arrow-right"></i></a>
+          <button class="btn ghost" id="heroCart"><i class="fa-solid fa-bag-shopping"></i> Keranjang</button>
+        </div>
+        <div class="hero-stats">
+          <div><b>100+</b><span>Project</span></div>
+          <div><b>4.9/5</b><span>Rating</span></div>
+          <div><b>Fast</b><span>Response</span></div>
+        </div>
+      </div>
+      <div class="hero-art reveal">
+        <div class="orb orb-a"></div><div class="orb orb-b"></div>
+        <div class="creative-card main-art">
+          <div class="art-top"><span>FADLI STORE</span><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <div class="character"><i class="fa-solid fa-gamepad"></i></div>
+          <div class="tool-icons">
+            <span>Ps</span><span>Pr</span><span>Ai</span>
+          </div>
+          <div class="art-caption"><small>PRO CREATIVE</small><strong>EDIT • DESIGN • MONTAGE</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section categories">
+      <div class="section-heading reveal">
+        <div><span class="eyebrow">LAYANAN</span><h2>Kategori Jasa</h2></div>
+        <p>Pilih kategori yang kamu butuhkan.</p>
+      </div>
+      <div class="category-grid">
+        <button class="category-card reveal" data-filter="editing">
+          <div class="cat-icon blue"><i class="fa-solid fa-film"></i></div>
+          <div><h3>Editing</h3><p>Video, Reels, TikTok, cinematic dan lainnya.</p></div><i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <button class="category-card reveal" data-filter="desain">
+          <div class="cat-icon purple"><i class="fa-solid fa-pen-nib"></i></div>
+          <div><h3>Desain</h3><p>Poster, banner, logo, thumbnail, dan feed.</p></div><i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <button class="category-card reveal" data-filter="montage">
+          <div class="cat-icon cyan"><i class="fa-solid fa-gamepad"></i></div>
+          <div><h3>Montage GS</h3><p>Montage GS Mobile Legends yang keren.</p></div><i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="section-heading reveal">
+        <div><span class="eyebrow">CATALOG</span><h2>Produk Populer</h2></div>
+        <p>Jasa digital premium, siap bantu project kamu.</p>
+      </div>
+      <div class="product-tools reveal">
+        <div class="filters" id="filters">
+          <button class="filter active" data-filter="all">Semua</button>
+          <button class="filter" data-filter="editing">Editing</button>
+          <button class="filter" data-filter="desain">Desain</button>
+          <button class="filter" data-filter="montage">Montage GS</button>
+        </div>
+        <label class="search"><i class="fa-solid fa-magnifying-glass"></i><input id="searchInput" type="search" placeholder="Cari produk..."></label>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <div class="empty" id="emptyState" hidden><i class="fa-regular fa-face-frown"></i><h3>Produk tidak ditemukan</h3><p>Coba gunakan kata kunci lain.</p></div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="about-panel reveal">
+        <div class="about-mark">F</div>
+        <div><span class="eyebrow">TENTANG KAMI</span><h2>Fadli Store</h2><p>Fadli Store adalah layanan kreatif digital yang menyediakan jasa editing, desain, dan montage GS Mobile Legends dengan mengutamakan kualitas, kreativitas, dan kepuasan pelanggan.</p></div>
+      </div>
+      <div class="benefits">
+        <div class="benefit reveal"><i class="fa-solid fa-bolt"></i><div><b>Pengerjaan cepat</b><span>Proses efisien sesuai paket.</span></div></div>
+        <div class="benefit reveal"><i class="fa-solid fa-wand-magic-sparkles"></i><div><b>Desain kreatif</b><span>Konsep menyesuaikan kebutuhan.</span></div></div>
+        <div class="benefit reveal"><i class="fa-solid fa-gamepad"></i><div><b>Spesialis gaming</b><span>Konten gaming lebih standout.</span></div></div>
+        <div class="benefit reveal"><i class="fa-solid fa-comments"></i><div><b>Konsultasi mudah</b><span>Diskusi langsung via WhatsApp.</span></div></div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="section-heading reveal"><div><span class="eyebrow">FAQ</span><h2>Pertanyaan Umum</h2></div><p>Info singkat sebelum kamu order.</p></div>
+      <div class="faq-list" id="faqList">
+        <div class="faq reveal"><button>Apakah bisa request desain?<i class="fa-solid fa-plus"></i></button><div class="faq-answer">Bisa. Kamu dapat mengirim referensi, warna, konsep, dan detail yang diinginkan saat checkout.</div></div>
+        <div class="faq reveal"><button>Bagaimana cara melakukan pemesanan?<i class="fa-solid fa-plus"></i></button><div class="faq-answer">Pilih produk → Tambah ke Keranjang → buka keranjang → isi data checkout → lanjut ke WhatsApp.</div></div>
+        <div class="faq reveal"><button>Apakah bisa revisi?<i class="fa-solid fa-plus"></i></button><div class="faq-answer">Bisa, jumlah revisi mengikuti paket yang kamu pilih. Detailnya tercantum pada produk.</div></div>
+        <div class="faq reveal"><button>Berapa lama proses pengerjaan?<i class="fa-solid fa-plus"></i></button><div class="faq-answer">Estimasi berbeda setiap layanan dan akan diinformasikan saat proses pemesanan.</div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-main">
+      <div><a class="brand" href="#home"><span class="brand-mark">F</span><span>FADLI<span>STORE</span></span></a><p>Creative Digital Service untuk kebutuhan editing, desain, dan gaming.</p></div>
+      <div><h4>Menu</h4><a href="#products">Produk</a><a href="#about">Tentang Kami</a><a href="#faq">FAQ</a><a href="#contact">Kontak</a></div>
+      <div><h4>Follow Us</h4><div class="socials"><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a><a href="#" id="footerWa" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></div></div>
+    </div>
+    <div class="footer-bottom">© 2026 Fadli Store. All Rights Reserved.</div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="drawer" id="cartDrawer" aria-label="Keranjang">
+    <div class="drawer-head"><div><span class="eyebrow">YOUR CART</span><h2>Keranjang Belanja</h2></div><button class="icon-btn" data-close><i class="fa-solid fa-xmark"></i></button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty"><i class="fa-solid fa-bag-shopping"></i><h3>Keranjang masih kosong</h3><p>Yuk pilih jasa yang kamu butuhkan.</p><button class="btn primary" data-close>Lihat Produk</button></div>
+    <div class="cart-summary" id="cartSummary">
+      <div><span>Subtotal</span><strong id="cartTotal">Rp0</strong></div>
+      <button class="btn primary full" id="checkoutBtn">Checkout via WhatsApp <i class="fa-brands fa-whatsapp"></i></button>
+      <button class="btn ghost full" data-close>Lanjut Belanja</button>
+    </div>
+  </aside>
+
+  <div class="modal" id="productModal">
+    <div class="modal-card">
+      <button class="modal-close" data-close><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-visual" id="modalVisual"></div>
+      <div class="modal-content">
+        <span class="badge" id="modalBadge"></span><span class="eyebrow" id="modalCategory"></span>
+        <h2 id="modalName"></h2><p id="modalDesc"></p>
+        <div class="detail-row"><span><i class="fa-regular fa-clock"></i> Estimasi</span><b id="modalTime"></b></div>
+        <div class="detail-row"><span><i class="fa-solid fa-rotate"></i> Revisi</span><b id="modalRevision"></b></div>
+        <div class="price" id="modalPrice"></div>
+        <div class="modal-actions"><button class="btn primary full" id="modalAdd">Tambah ke Keranjang</button><button class="btn ghost full" data-close>Lihat Keranjang</button></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="checkoutModal">
+    <div class="checkout-card">
+      <button class="modal-close" data-close><i class="fa-solid fa-xmark"></i></button>
+      <span class="eyebrow">CHECKOUT</span><h2>Lengkapi Data Pesanan</h2><p class="muted">Setelah dikirim, kamu akan diarahkan ke WhatsApp.</p>
+      <form id="checkoutForm">
+        <label>Nama Lengkap<input name="name" required placeholder="Masukkan nama lengkap"></label>
+        <label>Nomor WhatsApp<input name="phone" required placeholder="Contoh: 08123456789"></label>
+        <label>Catatan / Request<textarea name="note" rows="3" placeholder="Contoh: tema, referensi, atau permintaan khusus..."></textarea></label>
+        <div class="order-preview"><h4>Ringkasan Pesanan</h4><div id="checkoutItems"></div><div class="preview-total"><span>Total</span><b id="checkoutTotal">Rp0</b></div></div>
+        <button class="btn primary full" type="submit"><i class="fa-brands fa-whatsapp"></i> Lanjut ke WhatsApp</button>
+        <small class="privacy"><i class="fa-solid fa-lock"></i> Data digunakan untuk proses pemesanan.</small>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"><i class="fa-solid fa-circle-check"></i><span></span></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
