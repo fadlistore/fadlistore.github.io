@@ -6,9 +6,9 @@ const products = [
   {id:3,name:"Desain Thumbnail",category:"desain",price:50000,badge:"Popular",icon:"fa-image",time:"1 hari",revision:"2x revisi",desc:"Thumbnail menarik dan clickable untuk YouTube, gaming, dan kebutuhan sosial media."},
   {id:4,name:"Desain Logo",category:"desain",price:75000,badge:"Premium",icon:"fa-pen-nib",time:"2–3 hari",revision:"3x revisi",desc:"Logo profesional sesuai identitas brand, lengkap dengan konsep visual yang kuat."},
   {id:5,name:"Desain Poster / Banner",category:"desain",price:60000,badge:"New",icon:"fa-object-group",time:"1–2 hari",revision:"2x revisi",desc:"Desain poster dan banner untuk promosi, event, bisnis, maupun sosial media."},
-  {id:6,name:"Montage GS Basic",category:"montage",price:75000,badge:"",icon:"fa-gamepad",time:"2–3 hari",revision:"1x revisi",desc:"Montage GS Mobile Legends dengan beat sync dan transisi yang clean."},
-  {id:7,name:"Montage GS Premium",category:"montage",price:100000,badge:"Best Seller",icon:"fa-gamepad",time:"2–4 hari",revision:"2x revisi",desc:"Montage GS dengan efek keren, beat sync, color grading, dan kualitas HD."},
-  {id:8,name:"Montage GS Cinematic",category:"montage",price:150000,badge:"Pro",icon:"fa-bolt",time:"3–5 hari",revision:"3x revisi",desc:"Montage GS cinematic dengan storytelling, sound design, efek premium, dan hasil standout."}
+  {id:6,name:"Montage Gusion Basic",category:"montage",price:75000,badge:"",icon:"fa-gamepad",time:"2–3 hari",revision:"1x revisi",desc:"Montage Gusion Mobile Legends dengan beat sync dan transisi yang clean."},
+  {id:7,name:"Montage Gusion Premium",category:"montage",price:100000,badge:"Best Seller",icon:"fa-gamepad",time:"2–4 hari",revision:"2x revisi",desc:"Montage Gusion dengan efek keren, beat sync, color grading, dan kualitas HD."},
+  {id:8,name:"Montage Gusion Cinematic",category:"montage",price:150000,badge:"Pro",icon:"fa-bolt",time:"3–5 hari",revision:"3x revisi",desc:"Montage Gusion cinematic dengan storytelling, sound design, efek premium, dan hasil standout."}
 ];
 
 let cart = JSON.parse(localStorage.getItem("fadliStoreCart") || "[]");
@@ -34,7 +34,7 @@ function renderProducts(){
         ${p.badge?`<span class="badge">${p.badge}</span>`:""}<i class="fa-solid ${p.icon}"></i>
       </div>
       <div class="product-body">
-        <span class="eyebrow">${p.category==="montage"?"MONTAGE GS":p.category.toUpperCase()}</span>
+        <span class="eyebrow">${p.category==="montage"?"MONTAGE Gusion":p.category.toUpperCase()}</span>
         <h3>${p.name}</h3><p>${p.desc}</p>
         <div class="product-price">${rupiah(p.price)}</div>
         <div class="product-actions">
@@ -86,7 +86,7 @@ function openProduct(id){
   const p=productById(id);selectedProduct=p;
   $("#modalBadge").textContent=p.badge||"Layanan";
   $("#modalBadge").style.display=p.badge?"inline-flex":"none";
-  $("#modalCategory").textContent=p.category==="montage"?"MONTAGE GS":"JASA "+p.category.toUpperCase();
+  $("#modalCategory").textContent=p.category==="montage"?"MONTAGE Gusion":"JASA "+p.category.toUpperCase();
   $("#modalName").textContent=p.name;$("#modalDesc").textContent=p.desc;$("#modalTime").textContent=p.time;$("#modalRevision").textContent=p.revision;$("#modalPrice").textContent=rupiah(p.price);
   $("#modalVisual").innerHTML=`<i class="fa-solid ${p.icon}"></i>`;
   $("#productModal").classList.add("show");$("#overlay").classList.add("show");document.body.classList.add("no-scroll");
